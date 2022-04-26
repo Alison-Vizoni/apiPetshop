@@ -27,6 +27,10 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+SWAGGER_SETTINGS = {
+    'VALIDATOR_URL': 'http://localhost:8000'
+}
+
 
 # Application definition
 
@@ -37,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'drf_yasg',
     'cliente',
     'endereco',
     'funcionario',

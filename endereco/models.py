@@ -2,7 +2,7 @@ from django.db import models
 from django.utils.translation import gettext_lazy
 
 class Cidades(models.TextChoices):
-    FLORIANÓPOLIS = 'FLORIANÓPOLIS', gettext_lazy('Florianópolis')
+    FLORIANOPOLIS = 'FLORIANÓPOLIS', gettext_lazy('Florianópolis')
     CURITIBA = 'CURITIBA', gettext_lazy('Curitiba')
     SAO_PAULO = 'SAO_PAULO', gettext_lazy('São Paulo')
     RIO_DE_JANEIRO = 'RIO_DE_JANEIRO', gettext_lazy('Rio de Janeiro')
