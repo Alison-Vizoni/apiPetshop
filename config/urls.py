@@ -27,12 +27,15 @@ from rest_framework import permissions
 from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
 
+from users.views import UserViewSet, UserAuthView
+
 router = routers.SimpleRouter()
 router.register("cliente", ClienteViewSet)
 router.register("animal", AnimalViewSet)
 router.register("endereco", EnderecoViewSet)
 router.register("funcionario", FuncionarioViewSet)
 router.register("servico", ServicoViewSet)
+router.register("users", UserViewSet)
 
 schema_view = get_schema_view(
    openapi.Info(
@@ -51,4 +54,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include(router.urls)),
     path('api/docs/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
+    path('api/token/', UserAuthView.as_view()),
 ]

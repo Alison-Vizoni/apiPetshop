@@ -31,6 +31,8 @@ SWAGGER_SETTINGS = {
     'VALIDATOR_URL': 'http://localhost:8000'
 }
 
+AUTH_USER_MODEL = "users.UserModel"
+
 
 # Application definition
 
@@ -41,12 +43,15 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework.authtoken',
+    'rest_framework',
     'drf_yasg',
     'cliente',
     'endereco',
     'funcionario',
     'animal',
     'servico',
+    'users',
 ]
 
 MIDDLEWARE = [
