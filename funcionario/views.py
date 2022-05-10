@@ -14,3 +14,5 @@ class FuncionarioViewSet(ModelViewSet):
     serializer_class = FuncionarioSerializer
     http_method_names = ['get', 'post', 'patch']
 
+
+
